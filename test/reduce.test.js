@@ -61,4 +61,9 @@ describe('reduce', () => {
     expect(calls[0]).toEqual([0, 1, 0, array])
     expect(calls[1]).toEqual([0, 2, 1, array])
   })
+  
+  test('should handle null objects in baseReduce', () => {
+    const result = reduce(null, (acc, val) => acc + val, 0)
+    expect(result).toBe(0)
+  })
 })

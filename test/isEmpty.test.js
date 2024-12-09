@@ -21,6 +21,12 @@ describe('isEmpty', () => {
     expect(isEmpty(undefined)).toBeTruthy()
   })
 
+  test('should handle other value types', () => {
+    expect(isEmpty(123)).toBe(true)
+    expect(isEmpty(function() {})).toBe(true)
+    expect(isEmpty(true)).toBe(true)
+  })
+
   test('should handle Map and Set', () => {
     expect(isEmpty(new Map())).toBeTruthy()
     expect(isEmpty(new Set())).toBeTruthy()
