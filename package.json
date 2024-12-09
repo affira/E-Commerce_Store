@@ -1,0 +1,23 @@
+{
+  "name": "comp-se-200-testing",
+  "version": "1.0.0",
+  "description": "Software Testing Assignment for COMP.SE.200",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage && coveralls < coverage/lcov.info",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/.internal/**"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "testEnvironment": "node"
+  }
+}
