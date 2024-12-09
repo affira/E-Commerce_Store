@@ -15,8 +15,9 @@ jobs:
           npm install
           npm rebuild
       - run: npm test -- --coverage
-      - name: Coveralls
-        uses: coverallsapp/github-action@v2
+      - name: Coveralls GitHub Action
+          uses: coverallsapp/github-action@v2.3.4
+  
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: ./coverage/lcov.info
