@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "devDependencies": {
     "@babel/core": "^7.23.5",
