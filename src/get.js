@@ -7,25 +7,25 @@
  * @returns {*} Returns the resolved value
  */
 function get(object, path, defaultValue) {
-    const paths = Array.isArray(path) ? path : path.split('.')
-    
-    let result = object
-    
-    for (const segment of paths) {
-      if (result == null) {
-        return defaultValue
-      }
-      
-      // Handle array indexing
-      const match = segment.match(/(\w+)\[(\d+)\]/)
-      if (match) {
-        result = result[match[1]][match[2]]
-      } else {
-        result = result[segment]
-      }
-    }
-    
-    return result === undefined ? defaultValue : result
+  if (object == null || path === undefined) {
+    return defaultValue;
   }
-  
-  export default get
+
+  if (path === '' || (Array.isArray(path) && path.length === 0)) {
+    return defaultValue;
+  }
+
+  const paths = Array.isArray(path) ? path : path.split(/[.\[\]]+/).filter(Boolean);
+  let result = object;
+
+  for (const p of paths) {
+    result = result?.[p];
+    if (result === undefined) {
+      return defaultValue;
+    }
+  }
+
+  return result;
+}
+
+export default get;
