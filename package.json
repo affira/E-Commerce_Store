@@ -9,8 +9,8 @@
     "coverage": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
     "babel-jest": "^29.7.0",
     "coveralls": "^3.1.1",
     "jest": "^29.7.0",
@@ -21,9 +21,7 @@
       "^.+\\.js$": "babel-jest"
     },
     "testEnvironment": "node",
-    "moduleFileExtensions": [
-      "js"
-    ],
+    "moduleFileExtensions": ["js"],
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/.internal/**"
