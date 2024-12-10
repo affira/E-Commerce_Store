@@ -2,7 +2,7 @@
 
 This repository contains the implementation and tests for various utility functions, including checking whether a value is a typed array. It demonstrates the usage of JavaScript's type checking, unit testing with Jest, and understanding edge cases with custom `toStringTag` values and more.
 
-[![Coverage Status](https://coveralls.io/repos/github/affira/E-Commerce_Store/badge.svg)](https://coveralls.io/github/affira/E-Commerce_Store)
+[![Coverage Status](https://coveralls.io/repos/github/affira/E-Commerce_Store/badge.svg?branch=main)](https://coveralls.io/github/affira/E-Commerce_Store?branch=main)
 
 
 ## Table of Contents
