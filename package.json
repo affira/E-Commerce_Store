@@ -7,7 +7,7 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest --config jest.config.mjs",
     "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch --config jest.config.mjs",
-    "test:coverage": "jest --coverage --config jest.config.js",
+    "test:coverage": "jest --coverage --config jest.config.mjs",
     "coverage": "jest --coverage && coveralls < coverage/lcov.info",
     "lint": "eslint src test"
   },
