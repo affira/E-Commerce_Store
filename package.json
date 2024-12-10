@@ -1,9 +1,9 @@
 {
-  "name": "comp-se-200-testing",
+  "name": "software-testing-assignment",
   "version": "1.0.0",
-  "description": "Software Testing Assignment",
+  "description": "",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage && coveralls < coverage/lcov.info"
