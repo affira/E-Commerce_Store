@@ -1,3 +1,5 @@
+import isSymbol from '../src/isSymbol.js';
+
 describe('isSymbol', () => {
     test('should identify Symbol primitives', () => {
       expect(isSymbol(Symbol.iterator)).toBe(true);

@@ -1,3 +1,6 @@
+import castArray from '../src/castArray'; // adjust the path as needed
+
+
 describe('castArray', () => {
     test('should wrap non-array values in an array', () => {
       expect(castArray(1)).toEqual([1]);

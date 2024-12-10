@@ -1,3 +1,5 @@
+import endsWith from '../src/endsWith.js';
+
 describe('endsWith', () => {
     test('should check string endings', () => {
       expect(endsWith('abc', 'c')).toBe(true);

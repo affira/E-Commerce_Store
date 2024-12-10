@@ -1,3 +1,5 @@
+import every from '../src/every.js';
+
 describe('every', () => {
     test('should check if predicate returns true for all elements', () => {
       expect(every([true, 1, null, 'yes'], Boolean)).toBe(false);

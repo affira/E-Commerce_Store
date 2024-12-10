@@ -1,3 +1,5 @@
+import keys from '../src/keys.js';
+
 describe('keys', () => {
     test('should get keys of objects', () => {
       function Foo() {

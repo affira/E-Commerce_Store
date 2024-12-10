@@ -1,3 +1,5 @@
+import drop from '../src/drop.js';
+
 describe('drop', () => {
     test('should drop n elements from beginning', () => {
       expect(drop([1, 2, 3])).toEqual([2, 3]);

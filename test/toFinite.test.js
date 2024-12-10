@@ -1,3 +1,5 @@
+import toFinite from '../src/toFinite.js';
+
 describe('toFinite', () => {
     test('should convert basic numbers', () => {
       expect(toFinite(3.2)).toBe(3.2);

@@ -1,3 +1,5 @@
+import clamp from '../src/clamp.js';
+
 describe('clamp', () => {
     test('should clamp numbers between lower and upper bounds', () => {
       expect(clamp(-10, -5, 5)).toBe(-5);

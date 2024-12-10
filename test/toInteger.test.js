@@ -1,3 +1,5 @@
+import toInteger from '../src/toInteger.js';
+
 describe('toInteger', () => {
     test('should convert floating point numbers', () => {
       expect(toInteger(3.2)).toBe(3);

@@ -1,3 +1,5 @@
+import words from '../src/words.js';
+
 describe('words', () => {
     test('should split basic strings into words', () => {
       expect(words('fred, barney, & pebbles')).toEqual(['fred', 'barney', 'pebbles']);

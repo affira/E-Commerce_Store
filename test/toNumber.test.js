@@ -1,3 +1,5 @@
+import toNumber from '../src/toNumber.js';
+
 describe('toNumber', () => {
     test('should convert basic numeric values', () => {
       expect(toNumber(3.2)).toBe(3.2);

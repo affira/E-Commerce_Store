@@ -1,3 +1,5 @@
+import memoize from '../src/memoize.js';
+
 describe('memoize', () => {
     test('should memoize results based on first argument', () => {
       let callCount = 0;

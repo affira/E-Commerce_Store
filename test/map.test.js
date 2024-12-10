@@ -1,3 +1,5 @@
+import map from '../src/map.js';
+
 describe('map', () => {
   test('should map values using iteratee', () => {
     const square = n => n * n;

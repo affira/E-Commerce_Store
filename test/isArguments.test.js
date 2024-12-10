@@ -1,3 +1,5 @@
+import isArguments from '../src/isArguments.js';
+
 describe('isArguments', () => {
     test('should return true for arguments objects', () => {
       const args = (function() { return arguments; }(1, 2, 3));

@@ -1,3 +1,5 @@
+import get from '../src/get';
+
 describe('get', () => {
   const object = { 'a': [{ 'b': { 'c': 3 } }] };
 

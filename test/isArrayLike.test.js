@@ -1,3 +1,5 @@
+import isArrayLike from '../src/isArrayLike.js';
+
 describe('isArrayLike', () => {
     test('should return true for arrays', () => {
       expect(isArrayLike([1, 2, 3])).toBe(true);

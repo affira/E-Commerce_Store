@@ -1,3 +1,5 @@
+import reduce from '../src/reduce.js';
+
 describe('reduce', () => {
   test('should reduce array with initial value', () => {
     expect(reduce([1, 2], (sum, n) => sum + n, 0)).toBe(3);

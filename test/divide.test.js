@@ -1,3 +1,5 @@
+import divide from '../src/divide.js';
+
 describe('divide', () => {
     test('should divide two numbers correctly', () => {
       expect(divide(6, 3)).toBe(2);

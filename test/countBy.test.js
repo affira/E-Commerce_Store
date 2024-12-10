@@ -1,3 +1,5 @@
+import countBy from '../src/countBy.js';
+
 describe('countBy', () => {
   test('should transform keys by `iteratee` and count occurrences', () => {
     const users = [

@@ -1,3 +1,5 @@
+import isBoolean from '../src/isBoolean.js';
+
 describe('isBoolean', () => {
     test('should return true for boolean primitives', () => {
       expect(isBoolean(true)).toBe(true);

@@ -1,3 +1,5 @@
+import isObjectLike from '../src/isObjectLike.js';
+
 describe('isObjectLike', () => {
     test('should return true for objects', () => {
       expect(isObjectLike({})).toBe(true);

@@ -1,3 +1,5 @@
+import isDate from '../src/isDate.js';
+
 describe('isDate', () => {
     test('should return true for Date objects', () => {
       expect(isDate(new Date)).toBe(true);

@@ -1,3 +1,5 @@
+import filter from '../src/filter.js';
+
 describe('filter', () => {
   test('should filter array elements based on predicate', () => {
     const users = [

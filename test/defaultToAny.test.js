@@ -1,3 +1,5 @@
+import defaultToAny from '../src/defaultToAny.js';
+
 describe('defaultToAny', () => {
     test('should return the first value if it is not null/undefined', () => {
       expect(defaultToAny(1, 10, 20)).toBe(1);

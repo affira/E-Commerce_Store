@@ -1,3 +1,5 @@
+import slice from '../src/slice.js';
+
 describe('slice', () => {
     test('should slice array with positive indices', () => {
       expect(slice([1, 2, 3, 4], 1, 3)).toEqual([2, 3]);

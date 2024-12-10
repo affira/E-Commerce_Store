@@ -1,3 +1,5 @@
+import isTypedArray from '../src/isTypedArray.js';
+
 describe('isTypedArray', () => {
     test('should identify typed arrays', () => {
       expect(isTypedArray(new Int8Array(2))).toBe(true);

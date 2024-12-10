@@ -1,3 +1,5 @@
+import isObject from '../src/isObject.js';
+
 describe('isObject', () => {
     test('should return true for objects', () => {
       expect(isObject({})).toBe(true);

@@ -1,3 +1,5 @@
+import isBuffer from '../src/isBuffer.js';
+
 describe('isBuffer', () => {
     test('should handle Buffer objects when available', () => {
       // Since Buffer might not be available in all environments

@@ -1,3 +1,5 @@
+import ceil from '../src/ceil.js';
+
 describe('ceil', () => {
     test('should round up numbers with no precision', () => {
       expect(ceil(4.006)).toBe(5);

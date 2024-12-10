@@ -1,3 +1,5 @@
+import defaultTo from '../src/defaultTo.js';
+
 describe('defaultTo', () => {
     test('should return value when it is not null/undefined/NaN', () => {
       expect(defaultTo(1, 10)).toBe(1);

@@ -1,3 +1,5 @@
+import isLength from '../src/isLength.js';
+
 describe('isLength', () => {
     test('should return true for valid lengths', () => {
       expect(isLength(0)).toBe(true);

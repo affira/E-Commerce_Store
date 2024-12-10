@@ -1,3 +1,5 @@
+import upperFirst from '../src/upperFirst.js';
+
 describe('upperFirst', () => {
     beforeEach(() => {
       // Mock createCaseFirst since it's an internal dependency

@@ -1,3 +1,5 @@
+import isEmpty from '../src/isEmpty.js';
+
 describe('isEmpty', () => {
   test('should return true for null and undefined', () => {
     expect(isEmpty(null)).toBe(true);

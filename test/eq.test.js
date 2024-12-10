@@ -1,3 +1,5 @@
+import eq from '../src/eq.js';
+
 describe('eq', () => {
     test('should perform SameValueZero comparison', () => {
       const object = { 'a': 1 };

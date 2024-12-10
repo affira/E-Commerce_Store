@@ -1,3 +1,5 @@
+import toString from '../src/toString.js';
+
 describe('toString', () => {
     test('should convert basic values to strings', () => {
       expect(toString('string')).toBe('string');

@@ -1,3 +1,5 @@
+import difference from '../src/difference.js';
+
 describe('difference', () => {
     test('should return array values not included in other arrays', () => {
       expect(difference([2, 1], [2, 3])).toEqual([1]);
