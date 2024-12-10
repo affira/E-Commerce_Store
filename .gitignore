@@ -10,4 +10,4 @@ yarn-error.log*
 .vscode/
 *.log
 .nyc_output/
-.jest-cache/
+.jest-cache
