@@ -8,8 +8,7 @@
     "test": "node --experimental-vm-modules node_modules/.bin/jest --config jest.config.mjs",
     "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch --config jest.config.mjs",
     "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --config jest.config.mjs",
-    "coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --config jest.config.mjs && coveralls < coverage/lcov.info",
-    "lint": "eslint src test"
+    "coveralls": "node --experimental-vm-modules node_modules/.bin/jest --coverage --config jest.config.mjs && coveralls < coverage/lcov.info"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

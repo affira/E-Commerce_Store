@@ -1,5 +1,4 @@
 node_modules/
-coverage/
 .DS_Store
 .env
 .env.local
@@ -10,7 +9,5 @@ yarn-error.log*
 .idea/
 .vscode/
 *.log
-.coverage
-coverage.json
 .nyc_output/
 .jest-cache/

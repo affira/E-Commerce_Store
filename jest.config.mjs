@@ -5,6 +5,8 @@ export default {
   testEnvironment: 'node',
   moduleFileExtensions: ['js'],
   collectCoverageFrom: ['src/**/*.js', '!src/.internal/**'],
+  coverageReporters: ['lcov', 'text', 'text-summary', 'json'],
+  coverageDirectory: 'coverage',
   coverageThreshold: {
     global: {
       branches: 80,
