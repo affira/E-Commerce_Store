@@ -4,13 +4,13 @@
   "description": "Software Testing Assignment for utility functions",
   "main": "index.js",
   "type": "module",
-"scripts": {
-  "test": "node --experimental-vm-modules node_modules/.bin/jest --config jest.config.mjs",
-  "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch --config jest.config.mjs",
-  "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --config jest.config.mjs",
-  "coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --config jest.config.mjs && coveralls < coverage/lcov.info",
-  "lint": "eslint src test"
-},
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --config jest.config.mjs",
+    "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch --config jest.config.mjs",
+    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage --config jest.config.mjs",
+    "coverage": "jest --coverage && coveralls < coverage/lcov.info",
+    "lint": "eslint src test"
+  },
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
