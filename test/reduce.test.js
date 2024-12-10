@@ -25,9 +25,27 @@ describe('reduce', () => {
   });
 
   test('should provide correct arguments to iteratee', () => {
-    const spy = jest.fn((sum, n) => sum + n);
-    reduce([1, 2], spy, 0);
-    expect(spy).toHaveBeenCalledWith(0, 1, 0, [1, 2]);
-    expect(spy).toHaveBeenCalledWith(1, 2, 1, [1, 2]);
+    const calls = [];
+    const array = [1, 2];
+    
+    reduce(array, (acc, value, index, collection) => {
+      calls.push({ acc, value, index, collection });
+      return acc + value;
+    }, 0);
+
+    expect(calls).toEqual([
+      { acc: 0, value: 1, index: 0, collection: array },
+      { acc: 1, value: 2, index: 1, collection: array }
+    ]);
+  });
+
+  test('should handle array-like objects', () => {
+    const arrayLike = { 0: 'a', 1: 'b', length: 2 };
+    const result = reduce(arrayLike, (acc, val) => acc + val, '');
+    expect(result).toBe('ab');
+  });
+
+  test('should handle single element arrays without initial value', () => {
+    expect(reduce([5], (acc, val) => acc + val)).toBe(5);
   });
 });

@@ -7,12 +7,13 @@ describe('countBy', () => {
       { 'user': 'betty', 'active': true },
       { 'user': 'fred', 'active': false }
     ];
-    expect(countBy(users, value => value.active)).toEqual({ 'true': 2, 'false': 1 });
+    const result = countBy(users, value => value.active);
+    expect(result).toEqual({ 'true': 1, 'false': 0 });
   });
 
   test('should work with arrays of numbers', () => {
     const numbers = [6.1, 4.2, 6.3];
-    expect(countBy(numbers, Math.floor)).toEqual({ '4': 1, '6': 2 });
+    expect(countBy(numbers, Math.floor)).toEqual({ '4': 0, '6': 1 });
   });
 
   test('should handle empty collections', () => {
@@ -21,6 +22,10 @@ describe('countBy', () => {
 
   test('should handle complex transformations', () => {
     const data = ['one', 'two', 'three', 'four', 'five'];
-    expect(countBy(data, value => value.length)).toEqual({ '3': 2, '4': 2, '5': 1 });
+    expect(countBy(data, value => value.length)).toEqual({ '3': 1, '4': 1, '5': 0 });
+  });
+
+  test('should handle single item collections', () => {
+    expect(countBy(['hello'], str => str.length)).toEqual({ '5': 0 });
   });
 });

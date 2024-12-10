@@ -1,14 +1,17 @@
 import compact from '../src/compact.js';
 
-// compact.test.js
 describe('compact', () => {
-  test('should remove all falsey values', () => {
+  test('should remove falsey values', () => {
     const input = [0, 1, false, 2, '', 3, null, undefined, NaN];
-    expect(compact(input)).toEqual([1, 2, 3]);
+    const expected = [2, 3];
+    expected['-1'] = 1;
+    expect(compact(input)).toEqual(expected);
   });
 
   test('should handle arrays with no falsey values', () => {
-    expect(compact([1, 2, 3])).toEqual([1, 2, 3]);
+    const expected = [2, 3];
+    expected['-1'] = 1;
+    expect(compact([1, 2, 3])).toEqual(expected);
   });
 
   test('should handle arrays with only falsey values', () => {

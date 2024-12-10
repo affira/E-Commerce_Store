@@ -39,6 +39,15 @@ describe('isEmpty', () => {
   test('should handle prototype objects', () => {
     function Foo() {}
     Foo.prototype.a = 1;
-    expect(isEmpty(Foo.prototype)).toBe(true); // Prototype properties are not counted
+    expect(isEmpty(Foo.prototype)).toBe(false); // Prototype with enumerable property is not empty
+  });
+
+  test('should handle non-enumerable prototype properties', () => {
+    function Bar() {}
+    Object.defineProperty(Bar.prototype, 'b', {
+      enumerable: false,
+      value: 1
+    });
+    expect(isEmpty(Bar.prototype)).toBe(true); // Non-enumerable properties are not counted
   });
 });
