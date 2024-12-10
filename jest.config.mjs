@@ -4,9 +4,11 @@ export default {
   },
   testEnvironment: 'node',
   moduleFileExtensions: ['js'],
-  collectCoverageFrom: ['src/**/*.js', '!src/.internal/**'],
-  coverageReporters: ['lcov', 'text', 'text-summary', 'json'],
-  coverageDirectory: 'coverage',
+  collectCoverageFrom: [
+    'src/**/*.js',
+    '!src/.internal/**',
+  ],
+  coverageDirectory: './coverage', // specify a coverage directory
   coverageThreshold: {
     global: {
       branches: 80,
@@ -15,7 +17,9 @@ export default {
       statements: 80,
     },
   },
-  testMatch: ['<rootDir>/test/**/*.test.js'],
+  testMatch: [
+    '<rootDir>/test/**/*.test.js',
+  ],
   verbose: true,
   clearMocks: true,
   resetMocks: true,
