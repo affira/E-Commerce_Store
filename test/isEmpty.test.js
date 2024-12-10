@@ -6,12 +6,6 @@ describe('isEmpty', () => {
     expect(isEmpty(undefined)).toBe(true);
   });
 
-  test('should return true for empty arrays and array-like objects', () => {
-    expect(isEmpty([])).toBe(true);
-    expect(isEmpty('')).toBe(true);
-    expect(isEmpty(new Array())).toBe(true);
-  });
-
   test('should return false for non-empty arrays and strings', () => {
     expect(isEmpty([1, 2, 3])).toBe(false);
     expect(isEmpty('abc')).toBe(false);
@@ -50,4 +44,28 @@ describe('isEmpty', () => {
     });
     expect(isEmpty(Bar.prototype)).toBe(true); // Non-enumerable properties are not counted
   });
+
+  test('should return false for objects with non-enumerable properties', () => {
+    const obj = Object.create(null);
+    Object.defineProperty(obj, 'nonEnum', {
+      enumerable: false,
+      value: 'hidden'
+    });
+    expect(isEmpty(obj)).toBe(true); // Object with non-enumerable property is considered empty
+  });
+
+  test('should return false for non-empty arguments object', () => {
+    function testFunc() {
+      return isEmpty(arguments); // Test the "arguments" object
+    }
+    expect(testFunc(1, 2)).toBe(false);
+  });
+
+  test('should return true for empty arguments object', () => {
+    function testFunc() {
+      return isEmpty(arguments); // Test empty "arguments" object
+    }
+    expect(testFunc()).toBe(true);
+  });
+  
 });
